@@ -1,0 +1,5 @@
+FROM --platform=linux/amd64 python:3.10-slim
+WORKDIR /app
+COPY main.py /app/main.py
+RUN pip install --no-cache-dir PyMuPDF==1.22.5
+CMD ["python", "main.py"]
